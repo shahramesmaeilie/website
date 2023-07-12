@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>
+        {% block title %}
+
+        {% endblock  %}
+    </title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+    <link rel="stylesheet" href="{% static 'mbcsmbvyqr.css' %}" type="text/css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-rtl.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bsign.css' %}">
+        <script src="{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
+        <script src="{% static 'bootstrap.min.js' %}"></script>
+        <script src="{% static 'jquery.min.js' %}"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="politics_version" dir="rtl">
+<div id="mbvyqrebul_wrapper">
+  <ul id="mbvyqrebul_table" class="mbvyqrebul_menulist css_menu">
+    <li><div class="arrow buttonbg" style="width: auto;"><a href="{% url 'services' %}" class="button_4">محصولات و خدمات</a></div>
+      <ul>
+      <li><a title="" href="{% url 'projl' %}">لیست پروژه‌ها</a></li>
+      <li><a title="" href="{% url 'add' %}">ایجاد پروژه</a></li>
+      <li class="last_item"><a title="" href="{% url 'signup' %}">ایجاد کاربری</a></li>
+      </ul></li>
+  <li><div class="buttonbg" style="width: auto;"><a class="button_2" href="{% url 'contact' %}">تماس با من</a></div></li>
+  <li><div class="buttonbg" style="width: auto;"><a href="{% url 'gallery' %}">گالری</a></div></li>
+  <li><div class="buttonbg" style="width: auto;"><a class="button_2" href="{% url 'aboutme' %}">درباره من</a></div></li>
+  <li><div class="buttonbg" style="width: auto;"><a class="button_1" href="{% url 'index' %}">خانه</a></div></li>
+
+  </ul>
+</div>
+
+<!-- Menus will work without this javascript file. It is used only for extra
+     effects, improved usability, compatibility with very old web browsers
+     and support for touch screen devices. -->
+
+    {% block content %}
+    
+    {% endblock  %}
+
+  <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a> 
+
+  <!-- ALL JS FILES -->
+  <script src="{% static 'js/all.js' %}"></script>
+<!-- Camera Slider -->
+<script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script> 
+<script src="{% static 'js/parallaxie.js' %}"></script>
+<script src="{% static 'js/headline.js' %}"></script>
+<script src="{% static 'js/classie.js' %}"></script>
+<script src="{% static 'js/TweenMax.min.js' %}"></script>
+<script src="{% static 'js/slider-top.js' %}"></script>
+<!-- Contact form JavaScript -->
+  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'js/contact_me.js' %}"></script>
+  <!-- ALL PLUGINS -->
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="{% static 'js/jquery.vide.js' %}"></script>
+  <script type="text/javascript" src="{% static 'mbjsmbvyqr.js' %}"></script>
+
+</body>
+</html>

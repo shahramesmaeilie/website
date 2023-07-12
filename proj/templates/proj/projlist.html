@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>
+        لیست پروژه ها
+    </title>
+    <style>
+        .table{
+            border:1px solid red;
+            text-align:center;
+            align:center;
+            font-family:tahoma;
+        }
+        th{
+            height:80px;
+            width:120px;
+            border:1px solid red;
+            background-color:green;
+        }
+        td{
+            height:50px;
+            width:120px;
+            border:1px solid blue;
+            background-color:orange;
+        }
+        .b1{
+            height:50px;
+            width:250px;
+            background-color:lime;
+            border:1px solid lightblue;
+            font-size:20px;
+            
+        }
+        .b1:hover{
+            background-color:lightblue;
+            border-radius:10px;
+            cursor:hand;
+        }
+        .b2{
+            height:25px;
+            width:150px;
+            background-color:lime;
+            border:1px solid lightblue;
+            font-size:20px;
+            
+        }
+        .b2:hover{
+            background-color:lightblue;
+            border-radius:10px;
+            cursor:hand;
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <h1>
+        لیست پروژه های ما
+    </h1>
+    <br/>
+    <form action="{% url 'search' %}">
+        {% csrf_token %}
+        نام پروژه: <input type="text" name="t1" />
+        <input type="submit" value="جستجو" class="b2" />
+    </form>
+    <br/>
+    <form action="{% url 'searchc' %}">
+        {% csrf_token %}
+        کد پروژه: <input type="text" name="t2" />
+        <input type="submit" value="جستجو" class="b2" />
+    </form>
+    <br/>
+    <form action="{% url 'delete' %}">
+        {% csrf_token %}
+        کد پروژه: <input type="text" name="t3" />
+        <input type="submit" value="حذف پروژه" class="b2" />
+    </form>
+    <br/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>کد پروژه</th>
+                <th>نام پروژه</th>
+                <th>هزینه پروژه</th>
+                <th>مدت زمان پروژه</th>
+                <th>مدیر پروژه</th>
+                <th>مکان پروژه</th>
+                <th>تصویر پروژه</th>
+                {% comment %} <th>لینک تصویر پروژه</th> {% endcomment %}
+                <th>وضعیت پروژه</th>
+                <th>توضیحات پروژه</th>
+                <th>تعداد نفرات پروژه</th>
+                <th>موضوع پروژه</th>
+            </tr>
+        </thead>
+        {% for z in l %}
+        <tbody>
+            <tr>
+                <td>{{z.code}}</td>
+                <td>{{z.nam}}</td>
+                <td>{{z.cost}}</td>
+                <td>{{z.duration}}</td>
+                <td>{{z.modir}}</td>
+                <td>{{z.place}}</td>
+                <td><a href="{{z.pic.url}}" target="_blank"><img src="{{z.pic.url}}" height=100px width=100px /></a></td>
+                {% comment %} <td><a href="{{z.pic.url}}" target="_blank">{{z.pic.url}}</a></td> {% endcomment %}
+                <td>{{z.status}}</td>
+                <td>{{z.desc}}</td>
+                <td>{{z.teedadnafar}}</td>
+                <td>{{z.title}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    <br/><br/>
+    <form action="{% url 'add' %}">
+        <input type="submit" value="ایجاد پروژه جدید" class="b1" />
+    </form>
+
+</body>
+</html>

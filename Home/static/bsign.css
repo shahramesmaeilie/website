@@ -1,0 +1,90 @@
+.bsign{
+    position: absolute;
+    top:10px;
+    left: 10px;
+    width: 150px;
+    height: 40px;
+    background-color:#CCCCCC;
+    font-family: 'B Titr';
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #CCCCCC;
+    
+
+}
+.bsign:hover{
+    background-color:blue ;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    border-radius: 5px;
+    color: white;
+}
+
+.blog{
+    position: absolute;
+    top:10px;
+    left: 80px;
+    width: 150px;
+    height: 40px;
+    background-color:#CCCCCC;
+    font-family: 'B Titr';
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #CCCCCC;
+    
+
+}
+.blog:hover{
+    background-color:blue ;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    border-radius: 5px;
+    color: white;
+}
+@media only screen and (max-width: 900px) {
+    .bsign {
+        position: absolute;
+        top:50px;
+        right: 10px;
+        width: 150px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .blog{
+        position: absolute;
+        top:130px;
+        right: 10px;
+        width: 150px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .banner-01, .banner-02, .banner-03, .banner-04{
+        height: 500px;
+        width: 250px;
+    }
+}
+#about{
+    background-image: url('/static/36-1.jpg');
+}
+
+#mbvyqrebul_wrapper{
+    background-color: orangered;
+}
+.footer-left{
+    background-color: lightblue;
+    font-size: 20px;
+    position: relative;
+}
+
+/* body{
+    direction: rtl;
+}*/
+#div{
+    height: 300px;
+} 

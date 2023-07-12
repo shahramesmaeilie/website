@@ -1,0 +1,11 @@
+<head>
+    <title>خروج</title>
+</head>
+<body dir="">
+    <h1>ورود</h1>
+    <form action="{% url 'login' %}" method="post" >
+        {{form}}
+        {% csrf_token %}
+        <input type="submit" name="" value="خروج" />
+    </form>
+</body>

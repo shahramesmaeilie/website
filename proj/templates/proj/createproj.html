@@ -1,0 +1,50 @@
+<head>
+    <title>صفحه ایجاد پروژه</title>
+    <style>
+        table{
+            background-color:lightblue;
+        }
+        .b1{
+            height:50px;
+            width:250px;
+            background-color:lime;
+            border:1px solid lightblue;
+            font-size:20px;
+            
+        }
+        .b1:hover{
+            background-color:lightblue;
+            border-radius:10px;
+            cursor:hand;
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <h1>صفحه ایجاد پروژه</h1>
+    <hr/>
+    <p>{{note}}</p>
+    <hr/>
+    <table>
+       <form action="{% url 'add' %}" method="post" enctype="multipart/form-data">
+        {% for f in form %}
+            <tr>
+                <td>{{f.label_tag}}</td>
+                <td>{{f}}</td>
+            </tr>
+       
+       {% endfor %}
+       {% csrf_token %}
+       <tr>
+        <td></td>
+        <br/>
+        <td>
+            <input type="submit" value="ذخیره" />
+        </td>
+        </tr>
+        </form>
+    </table>
+    <br/><br/>
+    <form action="{% url 'projl' %}">
+        <input type="submit" value="بازگشت به لیست پروژه" class="b1" />
+    </form>
+</body>

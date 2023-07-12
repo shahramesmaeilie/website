@@ -1,0 +1,8 @@
+E:\shahramsite\djangoenv\Env\project\website\Home\templates\ebab_mbvyqr.png
+E:\shahramsite\djangoenv\Env\project\website\Home\templates\ebab_mbvyqr_d.png
+E:\shahramsite\djangoenv\Env\project\website\Home\templates\ebab_mbvyqr_d2.png
+E:\shahramsite\djangoenv\Env\project\website\Home\templates\ebab_mbvyqr_c.png
+E:\shahramsite\djangoenv\Env\project\website\Home\templates\ebab_mbvyqr_c2.png
+E:\shahramsite\djangoenv\Env\project\website\Home\templates\mbjsmbvyqr.js
+E:\shahramsite\djangoenv\Env\project\website\Home\templates\mbcsmbvyqr.css
+E:\shahramsite\djangoenv\Env\project\website\Home\templates\filelist_vyqr.txt

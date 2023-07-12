@@ -1,0 +1,11 @@
+<head>
+    <title>ثبت نام</title>
+</head>
+<body dir="">
+    <h1>صفحه ثبت نام کاربر</h1>
+    <form action="{% url 'signup' %}" method="post" >
+        {{form}}
+        {% csrf_token %}
+        <input type="submit" name="" value="ثبت نام" />
+    </form>
+</body>

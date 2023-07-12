@@ -1,0 +1,118 @@
+<head>
+    <title>
+        فرم پروژه ها
+    </title>
+    <style>
+        .table{
+            border:1px solid red;
+            text-align:center;
+            align:center;
+        }
+        th{
+            height:80px;
+            width:120px;
+            border:1px solid red;
+            background-color:lightblue;
+        }
+        td{
+            height:50px;
+            width:120px;
+            border:1px solid red;
+            background-color:orange;
+        }
+        a:hover{
+            font-size:14px;
+        }
+        .b2{
+            height:30px;
+            width:150px;
+            background-color:blue;
+            border:1px solid lightblue;
+            font-size:20px;
+            
+        }
+        .b2:hover{
+            background-color:lightblue;
+            border-radius:10px;
+            cursor:hand;
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <h1>
+        فرم پروژه 
+    </h1>
+    {% for z in l %}
+    <form name="f1" action="{% url 'searchc' %}" metod="post" enctype="multipart/form-data">
+    <table class="table">
+            <tr>
+                <th>کد پروژه</th>
+                <th><input type="text" value={{z.code}} /></th>
+
+            </tr>
+
+            <tr>
+                <th>نام پروژه</th>
+                <th><input type="text" value={{z.nam}} /></th>
+            </tr>
+
+            <tr>
+                <th>هزینه پروژه</th>
+                <th><input type="text" value={{z.cost}} /></th>
+            </tr>
+
+            <tr>
+                <th>مدت زمان پروژه</th>
+                <th><input type="text" value={{z.duration}} /></th>
+            </tr>
+
+            <tr>
+                <th>مدیر پروژه</th>
+                <th><input type="text" value={{z.modir}} /></th>
+            </tr>
+
+            <tr>
+                <th>مکان پروژه</th>
+                <th><input type="text" value={{z.place}} /></th>
+            </tr>
+
+            <tr>
+                <th>تصویر پروژه</th>
+                <th><a href="{{z.pic.url}}" target="_blank"><img src="{{z.pic.url}}" height=100px width=100px/></a></th>
+            </tr>
+
+            {% comment %} <tr>
+                <th>لینک تصویر پروژه</th>
+                <th><a href="{{z.pic.url}}" target="_blank">{{z.pic.url}}</a></th>
+            </tr> {% endcomment %}
+
+            <tr>
+                <th>وضعیت پروژه</th>
+                <th><input type="text" value={{z.status}} /></th>
+            </tr>
+
+            <tr>
+                <th>توضیحات پروژه</th>
+                <th><input type="text" value={{z.desc}} /></th>
+            </tr>
+
+            <tr>
+                <th>تعداد نفرات پروژه</th>
+                <th><input type="text" value={{z.teedadnafar}} /></th>
+            </tr>
+
+            <tr>
+                <th>موضوع پروژه</th>
+                <th><input type="text" value={{z.title}} /></th>
+
+            </tr>
+        </tbody>
+    </table>
+</form>
+{% endfor %}
+<br/>
+<form action="{% url 'projl' %}">
+    <input type="submit" value="بازگشت به لیست" class="b2" />
+</form>
+<br/>
+</body>

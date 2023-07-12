@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+صفحه اصلی
+{% endblock  %}
+{% block content %}
+<form action="{% url 'signup' %}" method="post" >
+  {{form}}
+  {% csrf_token %}
+  <input type="submit" name="" value="ثبت نام" class="bsign"/>
+</form>
+<br/>
+<form action="{% url 'login' %}" method="post" >
+  {{form}}
+  {% csrf_token %}
+  <input type="submit" name="" value="ورود" class="blog"/>
+</form>
+<br/>
+<br/>
+<div id="content">
+    <div id="slider">
+      <img src="{% static 'uploads/banner-01.jpg' %}" alt="" data-url="" class="banner-01">
+      <img src="{% static 'uploads/banner-02.jpg' %}" alt="" data-url="" class="banner-02">
+      <img src="{% static 'uploads/banner-03.jpg' %}" alt="" data-url="" class="banner-03">
+      <img src="{% static 'uploads/banner-04.jpg' %}" alt="" data-url="" class="banner-04">
+    </div>
+</div>
+
+{% endblock  %}   
